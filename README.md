@@ -5,7 +5,7 @@ This repository contains a Jupyter Notebook for processing 3D iPALM (interferome
 ## 🔧 Features
 
 - Loads multi-channel iPALM image stacks (TIFF format)
-- ✨ Gold bead (GB) reference stack used for:
+-   Gold bead (GB) reference stack used for:
   - Mask generation
   - Zero-level z-correction
   - Stack cleanup
