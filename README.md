@@ -1,4 +1,4 @@
-#  iPALM Data Processing and ROI Analysis
+#  iPALM Data processing and ROI analysis
 
 This repository contains a Jupyter Notebook for processing 3D iPALM (interferometric PhotoActivated Localization Microscopy) data, acquired on the [Janelia iPALM platform](https://www.aicjanelia.org/ipalm-techspecs). The script supports fluorescence channel separation, z-stack projection, zero level gold bead-based correction, ROI selection, and quantitative analysis of high-resolution image data.
 
@@ -16,15 +16,18 @@ This repository contains a Jupyter Notebook for processing 3D iPALM (interferome
 - CSV/TXT export of processed data and fitting results
 
 
-## 📂 File Overview
+<<<<<<< eletca-patch-1
+## 📂 File and code overview
+-The input should be an ASCII file (as provided by the microscope), which may contain up to 49 columns. For further data processing, only the columns 'Unwrapped Z', 'X Position', 'Y Position', and 'Label Set' will be used.
+- `iPALM_example_processing.ipynb`: The main notebook for loading, cleaning, processing, and analyzing iPALM datasets.
+- This file contains both gold bead data used for axial channel alignment and biologically relevant data from stained structures.
+- The code loads Z-position data from two imaging channels, fits a Gaussian to each dataset, and plots both unnormalized and normalized histograms. It saves the plots and extracts key parameters (amplitude, Z-center, and spread) from the fits for further analysis.
+- After loading the data, axial zero-level correction is done using gold beads. A TIFF file (e.g., "Run1-647_561_c123_sum_X21_processed_overlay_IDL.tiff") is required to apply a mask to the dataset.
+- Check the orientation of the mask — rotation or flipping may be needed (for example, image = cv2.flip(image, 0) can be used to flip vertically).
+-
 
-- `iPALM_example_processing.ipynb`: The main notebook for loading, cleaning, processing, and analyzing two-channel iPALM datasets.
--The input should be an ASCII file (as provided by the microscope), which may contain up to 49 columns. For further data processing, only the columns 'Unwrapped Z', 'X Position', 'Y Position', and 'Label Set' will be used. This file contains both gold bead data used for axial channel alignment and biologically relevant data from stained structures.
-- After loading the data, axial zero-level correction is done using gold beads. A TIFF file (e.g., "Run1-647_561_c123_sum_X21_processed_overlay_IDL.tiff") is required to be used as a mask to the dataset. Check the orientation of the mask — rotation or flipping may be needed (for example, image = cv2.flip(image, 0) can be used to flip vertically, as it is in the provided notebook). 
 
-
-
-## ➕ Optional Post-Processing: Accumulated ROI Analysis
+## ➕ Optional post-processing: accumulated ROI analysis
 
 The repository also includes a second notebook, `iPaLM_accumalated_data.ipynb`, for visualizing and interpreting the output data from earlier single-cell or ROI-level processing.
 
