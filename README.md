@@ -1,6 +1,6 @@
 #  iPALM Data processing and ROI analysis
 
-This repository contains a Jupyter Notebook iPALM_example_processing.ipynb for processing 3D iPALM (interferometric PhotoActivated Localization Microscopy) data, acquired on the [Janelia iPALM platform](https://www.aicjanelia.org/ipalm-techspecs). The script supports fluorescence channel separation, z-stack projection, zero level gold bead-based correction, ROI selection, and quantitative analysis of high-resolution image data. Additionally, it includes the notebook iPaLM_accumulated_data.ipynb, which allows visualization of the accumulated data (from multiple cells) produced by iPALM_example_processing.ipynb
+This repository contains a Jupyter Notebook iPALM_example_processing.ipynb for processing 3D iPALM (interferometric PhotoActivated Localization Microscopy) data, acquired on the [Janelia iPALM platform](https://www.aicjanelia.org/ipalm-techspecs). The script supports fluorescence channel separation, z-stack projection, zero level gold bead-based correction, ROI selection, and quantitative analysis of high-resolution image data. Additionally, it includes the notebook iPALM_accumulated_data.ipynb, which allows visualization of the accumulated data (from multiple cells) produced by iPALM_example_processing.ipynb
 
 ## 🔧 Features
 
